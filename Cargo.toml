@@ -1,0 +1,30 @@
+[package]
+name = "hashing-reader"
+version = "0.1.0"
+edition = "2021"
+license-file = "LICENSE"
+authors = ["Nikolay Denev <ndenev@cisco.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+digest = "0.10"
+tokio = { version = "1", optional = true }
+pin-project = { version = "1.1" }
+
+[features]
+default = ["tokio"]
+tokio = ["dep:tokio"]
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+sha2 = "0.10"
+criterion = { version = "0.5", features = [
+    "html_reports",
+    "async_tokio",
+    "async_futures",
+] }
+
+[[bench]]
+name = "benchmark"
+harness = false
