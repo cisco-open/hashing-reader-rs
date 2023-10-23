@@ -3,6 +3,8 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+#![doc = include_str!("../README.md")]
+
 use digest::Digest;
 use pin_project::pin_project;
 use std::io::{self, ErrorKind, Read};
