@@ -1,11 +1,12 @@
 [package]
 name = "hashing-reader"
+description = "A std::io::Read and tokio::io::AsyncRead wrapper that calculates checksum on the fly"
+repository = "https://github.com/cisco-open/hashing-reader-rs"
 version = "0.1.0"
 edition = "2021"
 license-file = "LICENSE"
 authors = ["Nikolay Denev <ndenev@cisco.com>"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 digest = "0.10"
