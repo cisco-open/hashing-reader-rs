@@ -20,7 +20,7 @@ use hashing_reader::HashingReader;
 let data = "some data to hash";
 let reader = data.as_bytes();
 
-let (hr, rx) = HashingReader::<_, Sha256>::new(reader);
+let (mut hr, rx) = HashingReader::<_, Sha256>::new(reader);
 
 let mut buf = Vec::new();
 let _ = hr.read_to_end(&mut buf);
